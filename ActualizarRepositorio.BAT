@@ -2,11 +2,7 @@
 echo Actualizando repositorio...
 
 :: Cambiar al directorio del repositorio
-cd C:
-cd Users
-cd user-hp
-cd Desktop
-cd Carpeta_Proyecto
+cd C/Users/user-hp/desktop/Carpeta_Proyecto
 
 :: Verificar el estado
 git status
