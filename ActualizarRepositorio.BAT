@@ -1,20 +1,14 @@
 @echo off
-echo Actualizando repositorio...
+REM Cambiar al directorio del repositorio
+cd /d "C:\Users\user-hp\Desktop\Carpeta_Proyecto"
 
-:: Cambiar al directorio del repositorio
-cd C/Users/user-hp/desktop/Carpeta_Proyecto
-
-:: Verificar el estado
-git status
-
-:: Agregar todos los cambios
-git add .
-
-:: Hacer commit con un mensaje predefinido
-git commit -m "Actualizando cambios"
-
-:: Hacer push a la rama master
-git push origin master
-
-echo Actualización completada.
+REM Verificar si la carpeta existe
+if exist . (
+    git pull origin master
+    git add .
+    git commit -m "Actualizando cambios"
+    git push origin master
+) else (
+    echo "El directorio no existe. Por favor, verifica la ruta."
+)
 pause
